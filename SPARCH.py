@@ -272,7 +272,7 @@ def MofN_simulator(dist_params=[0.2,-0.6,0.7],size=5000):
     sim_sparch.distribution = MixNormal()
     return sim_sparch.simulate(fake_params, size),fake_params
 
-if __name__==’__main__:
+if __name__=='__main__':
     sim_data,fake_params = MofN_simulator()
     sparch = arch_model(sim_data.data, p=2, o=2, q=1, mean='Zero')
     sparch.distribution = MixNormal()
